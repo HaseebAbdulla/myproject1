@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"> <b><u>My Phone</u></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="https://www.amazon.in/l/22929223031/?pf_rd_r=8QVRYB3BP4Z67M0RMQBQ&pf_rd_p=302622b0-d86b-4e0c-b67c-34e943d8fb45&pd_rd_r=b8f79058-5bb7-4e7d-8179-a272d78420c1&pd_rd_w=vFja4&pd_rd_wg=uhq4f&ref_=pd_gw_unk"><b>Home</b> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <b>Dropdown</b>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">mobiles</a>
+                <a class="dropdown-item" href="#">Laptop</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-6">
+
+                <h3>iphone 13 pro</h3><hr>
+                  <img src="{% static 'images/iphone.png'%}" class="img-fluid" alt="">
+                  <a href="{% url 'login' %}"> <button> <h3>$149000</h2> </button></a>
+                 
+                  <a href="https://www.amazon.in/Apple-iPhone-13-512GB-Blue/dp/B09G9JJT7M/ref=sr_1_4?crid=1AW5FWCT2J6ZI&keywords=iphone+13&qid=1643742918&sprefix=ip%2Cspecialty-aps%2C282&sr=8-4"> <button type="button" class="btn btn-dark">BUY NOW</button></a>
+
+                 
+                  <p>Apple iPhone 13 is priced at Rs 79,900 in India, which is for the base 128GB storage model. There are also 256GB and 512GB storage models that were launched for Rs 89,900 and Rs 1,09,900, respectively. The iPhone 13 Pro was originally launched for Rs 1,19,900.</p>
+              </div>
+
+              <div class="col-md-6 col-6">
+                  <h3 align="center">samsung s21 ultra</h3><hr>
+                  <img src="{% static 'images/samsung.jpg'%}" class="img-fluid" alt="samsung">
+                  <br>
+                  <br>
+                  <br><br>
+                  <br>
+                  <h2></h2>
+                  <a href="https://www.amazon.in/Samsung-Ultra-Snapdragon-Phantom-Storage/dp/B08V8L67N2/ref=sr_1_2?keywords=s21+ultra&qid=1643743226&sprefix=s21+ultr%2Caps%2C547&sr=8-2"><button> <h2>$134000</h2></button></a>
+                  <a href="https://www.amazon.in/Samsung-Ultra-Snapdragon-Phantom-Storage/dp/B08V8L67N2/ref=sr_1_2?keywords=s21+ultra&qid=1643743226&sprefix=s21+ultr%2Caps%2C547&sr=8-2"> <button type="button" class="btn btn-dark">BUY NOW</button></a>
+
+                  <p>You get a better main 108MP camera, a glass back (instead of plastic), more RAM and a higher-res display. As you'll see in my Galaxy S21 Ultra review, there are some trade-offs. But overall, this is one of the best phones money can buy for those willing to pay a premium and one of the best Android phones overall.</p>
+              
+                </div >
+                
+                <div class="col-md-4">
+                  <h3>Oneplus 9R</h3><hr>
+                  <img src="{% static 'images/oneplus2.jpg'%}"class="img-fluid" alt="">
+                  <br>
+                  <br><br>
+                  <button> <h4>$84000</h3></button>
+                  <button type="button" class="btn btn-dark">BUY NOW</button>
+
+                  <p>With only cosmetic changes and a slightly upgraded processor compared to the OnePlus 8T, the new OnePlus 9R is not very exciting at first. It has been launched exclusively in India because the OnePlus 9 and 9 Pro have come in at higher prices. The company could have done more to keep things fresh in the premium segment, but even so, the 9R is a good overall package. It looks slick, and has a crisp AMOLED screen plus stereo speakers. Performance is good in everyday tasks and games run well too.</p>
+
+                </div>
+
+                <div class="col-md-4">
+                  <h3>Oppo Reno 6</h3><hr>
+                  <img src="{% static 'images/Oppo.jpg'%}"class="img-fluid" alt="">
+                  
+                  <br><br>
+                  <br>
+                  <button> <h4>$40000</h3></button>
+                    <button type="button" class="btn btn-dark">BUY NOW</button>
+
+                    <p>AMOLED, 90Hz, 430 nits (typ), 600 nits (HBM), 750 nits (peak)
+                      Size	6.43 inches, 99.8 cm2 (~88.3% screen-to-body ratio)
+                      Resolution	1080 x 2400 pixels, 20:9 ratio (~409 ppi density)
+                      Protection	Corning Gorilla Glass 5
+                      PLATFORM	OS	Android 11, ColorOS 11.3
+                      Chipset	MediaTek MT6877 Dimensity 900 5G (6 nm)
+                      CPU	Octa-core (2x2.4 GHz Cortex-A78 & 6x2.0 GHz Cortex-A55)
+                      GPU	Mali-G68 MC4</p>
+
+
+                </div>
+
+
+
+
+
+              <div style="background-color:lightsteelblue">
+ 
+                <h2 align="center">About</h2>
+                <p>Modern cell phones are capable of much more than just sending and receiving phone calls. Mobile phones used in today's world allow users to send and receive text messages, emails, photos and video as well as access the Internet, play games, listen to music, use GPS (Global Positioning Systems) and more.</p>
+                
+  
+              </div>
+          </div>
+
+      </div>
+    </div>
+</body>
+</html>
