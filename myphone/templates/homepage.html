@@ -55,7 +55,7 @@
                   <img src="{% static 'images/iphone.png'%}" class="img-fluid" alt="">
                   <a href="{% url 'login' %}"> <button> <h3>$149000</h2> </button></a>
                  
-                  <a href="https://www.amazon.in/Apple-iPhone-13-512GB-Blue/dp/B09G9JJT7M/ref=sr_1_4?crid=1AW5FWCT2J6ZI&keywords=iphone+13&qid=1643742918&sprefix=ip%2Cspecialty-aps%2C282&sr=8-4"> <button type="button" class="btn btn-dark">BUY NOW</button></a>
+                  <a href="{% url 'sign' %}"> <button type="button" class="btn btn-dark">BUY NOW</button></a>
 
                  
                   <p>Apple iPhone 13 is priced at Rs 79,900 in India, which is for the base 128GB storage model. There are also 256GB and 512GB storage models that were launched for Rs 89,900 and Rs 1,09,900, respectively. The iPhone 13 Pro was originally launched for Rs 1,19,900.</p>
@@ -69,8 +69,8 @@
                   <br><br>
                   <br>
                   <h2></h2>
-                  <a href="https://www.amazon.in/Samsung-Ultra-Snapdragon-Phantom-Storage/dp/B08V8L67N2/ref=sr_1_2?keywords=s21+ultra&qid=1643743226&sprefix=s21+ultr%2Caps%2C547&sr=8-2"><button> <h2>$134000</h2></button></a>
-                  <a href="https://www.amazon.in/Samsung-Ultra-Snapdragon-Phantom-Storage/dp/B08V8L67N2/ref=sr_1_2?keywords=s21+ultra&qid=1643743226&sprefix=s21+ultr%2Caps%2C547&sr=8-2"> <button type="button" class="btn btn-dark">BUY NOW</button></a>
+                  <a href="{% url 'sign' %}"><button> <h2>$134000</h2></button></a>
+                  <a href="{% url 'sign' %}"><button type="button" class="btn btn-dark">BUY NOW</button></a>
 
                   <p>You get a better main 108MP camera, a glass back (instead of plastic), more RAM and a higher-res display. As you'll see in my Galaxy S21 Ultra review, there are some trade-offs. But overall, this is one of the best phones money can buy for those willing to pay a premium and one of the best Android phones overall.</p>
               
@@ -105,6 +105,33 @@
                       Chipset	MediaTek MT6877 Dimensity 900 5G (6 nm)
                       CPU	Octa-core (2x2.4 GHz Cortex-A78 & 6x2.0 GHz Cortex-A55)
                       GPU	Mali-G68 MC4</p>
+
+
+                </div>
+
+                <div class="col-md-4">
+                  <h3>Google Pixel 6</h3><hr>
+                  <img src="{% static 'images/google.jpg'%}" alt="">
+                  <br><br>
+                  <br>
+                  <button> <h4>$55000</h3></button>
+                    <button type="button" class="btn btn-dark">BUY NOW</button>
+
+                    <p>Technology	
+                      GSM / CDMA / HSPA / EVDO / LTE / 5G
+                      LAUNCH	Announced	2021, October 19
+                      Status	Available. Released 2021, October 28
+                      BODY	Dimensions	158.6 x 74.8 x 8.9 mm (6.24 x 2.94 x 0.35 in)
+                      Weight	207 g (7.30 oz)
+                      Build	Glass front (Gorilla Glass Victus), glass back (Gorilla Glass 6), aluminum frame
+                      SIM	Nano-SIM and/or eSIM
+                         IP68 dust/water resistant (up to 1.5m for 30 mins)
+                      DISPLAY	Type	AMOLED, 90Hz, HDR10+
+                      Size	6.4 inches, 98.9 cm2 (~83.4% screen-to-body ratio)
+                      Resolution	1080 x 2400 pixels, 20:9 ratio (~411 ppi density)
+                      Protection	Corning Gorilla Glass Victus
+                         Always-on display
+                      </p>
 
 
                 </div>
