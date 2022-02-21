@@ -12,8 +12,15 @@
 </head>
 <body>
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"> <b><u>My Phone</u></b></a>
+
+
+    
+
+
+
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"> <b style="color: aliceblue;"><u>My Phone</u></b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,14 +28,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="https://www.amazon.in/l/22929223031/?pf_rd_r=8QVRYB3BP4Z67M0RMQBQ&pf_rd_p=302622b0-d86b-4e0c-b67c-34e943d8fb45&pd_rd_r=b8f79058-5bb7-4e7d-8179-a272d78420c1&pd_rd_w=vFja4&pd_rd_wg=uhq4f&ref_=pd_gw_unk"><b>Home</b> <span class="sr-only">(current)</span></a>
-            </li>
+                <a class="nav-link" href="https://www.amazon.in/l/22929223031/?pf_rd_r=8QVRYB3BP4Z67M0RMQBQ&pf_rd_p=302622b0-d86b-4e0c-b67c-34e943d8fb45&pd_rd_r=b8f79058-5bb7-4e7d-8179-a272d78420c1&pd_rd_w=vFja4&pd_rd_wg=uhq4f&ref_=pd_gw_unk"><b style="color: aliceblue;">Home</b> <span class="sr-only">(current)</span></a>
+            </li> 
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#" style="color: aliceblue;">link</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                <b>Dropdown</b>
+                <b style="color: aliceblue;">Dropdown</b>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">mobiles</a>
@@ -47,94 +54,87 @@
           </form>
         </div>
       </nav>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-6 col-6">
+     
+      <br><br><br>
 
-                <h3>iphone 13 pro</h3><hr>
-                  <img src="{% static 'images/iphone.png'%}" class="img-fluid" alt="">
-                  <a href="{% url 'login' %}"> <button> <h3>$149000</h2> </button></a>
-                 
-                  <a href="{% url 'sign' %}"> <button type="button" class="btn btn-dark">BUY NOW</button></a>
+      
+               
 
-                 
-                  <p>Apple iPhone 13 is priced at Rs 79,900 in India, which is for the base 128GB storage model. There are also 256GB and 512GB storage models that were launched for Rs 89,900 and Rs 1,09,900, respectively. The iPhone 13 Pro was originally launched for Rs 1,19,900.</p>
-              </div>
+                  <div class="row">
+                    <div class="col-md-4 col-4" style="max-height: 200px; min-height: 200px;">
+                      <div class="card" style="width: 18rem;">
+                        <h3 align="center">APPLE</H2><hr>
+                        <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iPhone.png'%}" height="250px" width="200px" alt="...">
+                        <br>
+                        <div class="card-body">
+                          <h5 class="card-title">I PHONE 13 PRO</h5><hr>
+                          <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                          <li>128</li>
+                          <li>256</li></b></p> -->
+                          <h4><b> $109,900</b></h2>
+                          <a href="{% url 'sign' %}" class="btn btn-primary">BUY NOW</a>
+                          <a href="{% url 'sign' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                        </div>
+                      </div>
 
-              <div class="col-md-6 col-6">
-                  <h3 align="center">samsung s21 ultra</h3><hr>
-                  <img src="{% static 'images/samsung.jpg'%}" class="img-fluid" alt="samsung">
-                  <br>
-                  <br>
-                  <br><br>
-                  <br>
-                  <h2></h2>
-                  <a href="{% url 'sign' %}"><button> <h2>$134000</h2></button></a>
-                  <a href="{% url 'sign' %}"><button type="button" class="btn btn-dark">BUY NOW</button></a>
+                      
 
-                  <p>You get a better main 108MP camera, a glass back (instead of plastic), more RAM and a higher-res display. As you'll see in my Galaxy S21 Ultra review, there are some trade-offs. But overall, this is one of the best phones money can buy for those willing to pay a premium and one of the best Android phones overall.</p>
-              
-                </div >
-                
-                <div class="col-md-4">
-                  <h3>Oneplus 9R</h3><hr>
-                  <img src="{% static 'images/oneplus2.jpg'%}"class="img-fluid" alt="">
-                  <br>
-                  <br><br>
-                  <button> <h4>$84000</h3></button>
-                  <button type="button" class="btn btn-dark">BUY NOW</button>
+                    </div>
+                    <div class="col-md-4 col-4" style="max-height: 200px; min-height: 200px;">
+                      <div class="card" style="width: 18rem;">
+                        <h3 align="center">APPLE</H2><hr>
+                        <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="...">
+                        <br>
+                        <div class="card-body">
+                          <h5 class="card-title">I PHONE 12 PRO</h5><hr>
+                          <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                          <li>128</li>
+                          <li>256</li></b></p> -->
+                          <h4><b> $90,900</b></h2>
+                          <a href="{% url 'sign' %}" class="btn btn-primary">BUY NOW</a>
+                          <a href="{% url 'sign' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                        </div>
+                      </div>
 
-                  <p>With only cosmetic changes and a slightly upgraded processor compared to the OnePlus 8T, the new OnePlus 9R is not very exciting at first. It has been launched exclusively in India because the OnePlus 9 and 9 Pro have come in at higher prices. The company could have done more to keep things fresh in the premium segment, but even so, the 9R is a good overall package. It looks slick, and has a crisp AMOLED screen plus stereo speakers. Performance is good in everyday tasks and games run well too.</p>
+                   
+                      </div>
+                      <div class="col-md-4 col-4" style="max-height: 200px; min-height: 200px;">
+                        <div class="card" style="width: 18rem;">
+                          <h3 align="center">APPLE</H2><hr><br>
+                          <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/11pro.jpg'%}" height="204px" width="220px" alt="...">
+                          <br><br>
+                          <div class="card-body">
+                            <h5 class="card-title">I PHONE 13 PRO</h5><hr>
+                            <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                            <li>128</li>
+                            <li>256</li></b></p> -->
+                            <h4><b> $80,900</b></h2>
+                            <a href="{% url 'sign' %}" class="btn btn-primary">BUY NOW</a>
+                            <a href="{% url 'sign' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                          </div>
+                        </div>
+  
 
-                </div>
+                      
 
-                <div class="col-md-4">
-                  <h3>Oppo Reno 6</h3><hr>
-                  <img src="{% static 'images/Oppo.jpg'%}"class="img-fluid" alt="">
+                    </div>
+                    
+
+                   
+                      </div>
+
+                      
+                  </div>
                   
-                  <br><br>
-                  <br>
-                  <button> <h4>$40000</h3></button>
-                    <button type="button" class="btn btn-dark">BUY NOW</button>
+                    
+                  </div>
 
-                    <p>AMOLED, 90Hz, 430 nits (typ), 600 nits (HBM), 750 nits (peak)
-                      Size	6.43 inches, 99.8 cm2 (~88.3% screen-to-body ratio)
-                      Resolution	1080 x 2400 pixels, 20:9 ratio (~409 ppi density)
-                      Protection	Corning Gorilla Glass 5
-                      PLATFORM	OS	Android 11, ColorOS 11.3
-                      Chipset	MediaTek MT6877 Dimensity 900 5G (6 nm)
-                      CPU	Octa-core (2x2.4 GHz Cortex-A78 & 6x2.0 GHz Cortex-A55)
-                      GPU	Mali-G68 MC4</p>
+                  
 
+                  
+                   
 
-                </div>
-
-                <div class="col-md-4">
-                  <h3>Google Pixel 6</h3><hr>
-                  <img src="{% static 'images/google.jpg'%}" alt="">
-                  <br><br>
-                  <br>
-                  <button> <h4>$55000</h3></button>
-                    <button type="button" class="btn btn-dark">BUY NOW</button>
-
-                    <p>Technology	
-                      GSM / CDMA / HSPA / EVDO / LTE / 5G
-                      LAUNCH	Announced	2021, October 19
-                      Status	Available. Released 2021, October 28
-                      BODY	Dimensions	158.6 x 74.8 x 8.9 mm (6.24 x 2.94 x 0.35 in)
-                      Weight	207 g (7.30 oz)
-                      Build	Glass front (Gorilla Glass Victus), glass back (Gorilla Glass 6), aluminum frame
-                      SIM	Nano-SIM and/or eSIM
-                         IP68 dust/water resistant (up to 1.5m for 30 mins)
-                      DISPLAY	Type	AMOLED, 90Hz, HDR10+
-                      Size	6.4 inches, 98.9 cm2 (~83.4% screen-to-body ratio)
-                      Resolution	1080 x 2400 pixels, 20:9 ratio (~411 ppi density)
-                      Protection	Corning Gorilla Glass Victus
-                         Always-on display
-                      </p>
-
-
-                </div>
+                
 
 
 
@@ -142,9 +142,9 @@
 
               <div style="background-color:lightsteelblue">
  
-                <h2 align="center">About</h2>
+                <!-- <h2 align="center">About</h2>
                 <p>Modern cell phones are capable of much more than just sending and receiving phone calls. Mobile phones used in today's world allow users to send and receive text messages, emails, photos and video as well as access the Internet, play games, listen to music, use GPS (Global Positioning Systems) and more.</p>
-                
+                 -->
   
               </div>
           </div>

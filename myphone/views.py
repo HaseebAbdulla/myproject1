@@ -10,5 +10,8 @@ def home(request):
 def sign(request):
     return render(request,"signup.html")    
 
+def details(request):
+    return render(request,"details.html")
+
 
 
