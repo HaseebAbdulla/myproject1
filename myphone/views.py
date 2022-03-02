@@ -7,11 +7,20 @@ def login(request):
 def home(request):
     return render(request,"homepage.html")
 
+
 def sign(request):
     return render(request,"signup.html")    
 
 def details(request):
     return render(request,"details.html")
+
+def cart(request):
+    return render(request,"cart.html")
+
+def profile(request):
+    return render(request,"profile.html")
+
+
 
 
 

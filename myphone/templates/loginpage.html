@@ -6,22 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylecss.css">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">  
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<style>
+  footer {
+    color: #caced1 !important
+}
+
+li {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.Careers {
+    cursor: pointer;
+    color: #1E88E5
+}
+
+.row-1 {
+    background-color: #1E242A !important
+}
+
+.row-2 {
+    background-color: #28323C !important
+}
+  
+</style>
 </head>
 <body>
 
   <div>
 
  
-  <nav class="navbar navbar-light bg-dark">
+  <nav class="navbar navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" style="color: aliceblue;"><b><u>My Phone</u></b></a><hr>
     <form class="form-inline">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      
     </form>
   </nav>
   
@@ -34,9 +58,9 @@
         </h2>
         
         <!-- <h1 align="center" style="color: aliceblue;"> <b>MY PHONE</b></h1><hr> -->
-        <br>
+        <br><br><br><br>
         <h3 style="color: slategray;" align="center"><b>WELCOME TO OUR WORLD!..</b></h2><hr>
-        <br><br> -->
+        <br>
         
         
         <style>
@@ -48,7 +72,7 @@
         <form align="center" border="1">
             
             <div class="form-group row">
-              <label for="staticEmail" class="col-lg-4 col-form-label" style="color: aliceblue;" ><b>EMAIL</b></label>
+              <label for="staticEmail" class="col-lg-4  col-form-label" style="color: aliceblue;" ><b>EMAIL</b></label>
               <div class="col-lg-4">
                 <input type="text" class="form-control" id="staticEmail" placeholder="enter your email">
               </div>
@@ -59,14 +83,111 @@
                 <input type="password" class="form-control" id="inputPassword" placeholder=" enter your password">
               </div>
             </div>
-          </form>
+          </form><br>
         </tr>
         <div align="center"><a href="{% url 'home' %}"><button type="button" class="btn btn-primary btn-sm">SUBMIT</button>
         </a>
         <br><br>
 
-        <h6 align="center" style="color: aliceblue;">DO YOU HAVE ANY ACCOUNT?</h5>
-        <a href="{% url 'details' %}"> <button type="button" class="btn btn-dark">CREATE A NEW ACCOUNT</button></a>
+        <!-- <p style="color: aliceblue;"><i>Do You Have Any Account?</i></p> -->
+        <a href="{% url 'details'%}" style="color: aliceblue;"> <i>Do You Have Any Account?</i></a><br><br>
+        
+        <a href="{% url 'details' %}"> <button type="button" class="btn btn-dark">create new account</button></a><br><br><br><br><br>
+        
+
+
+
+        
+        <!-- <div>
+          
+    <footer class="page-footer font-small unique-color-dark pt-4">
+    
+      
+      <div class="container">
+    
+        
+        <ul class="list-unstyled list-inline text-center py-2">
+          <li class="list-inline-item">
+            <h5 class="mb-1"></h5>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-outline-white btn-rounded"></a>
+          </li>
+        </ul>
+      
+    
+      </div>
+     
+     
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> myphone.com</a>
+      </div>
+    
+    
+    </footer>
+    
+        </div>
+ -->
+
+
+
+
+
+
+ <footer>
+  <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3">
+      <div class="col-12">
+          <div class="row row-2">
+              <div class="col-sm-3 text-md-center">
+                  <h5><span> <i class="fa fa-firefox text-light" aria-hidden="true"></i></span><b> <b>My Phone</b></b></h5>
+              </div>
+              <div class="col-sm-3 my-sm-0 mt-5">
+                  <ul class="list-unstyled">
+                      <li class="mt-0">Platform</li>
+                      <li>Help Center</li>
+                      <li>Security</li>
+                  </ul>
+              </div>
+              <div class="col-sm-3 my-sm-0 mt-5">
+                  <ul class="list-unstyled">
+                      <li class="mt-0">Customers</li>
+                      <li>Use Cases</li>
+                      <li>Customers Services</li>
+                  </ul>
+              </div>
+              <div class="col-sm-3 my-sm-0 mt-5">
+                  <ul class="list-unstyled">
+                      <li class="mt-0">Company</li>
+                      <li>About</li>
+                      <li>Careers- <span class="Careers">We're-hiring</span></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row justify-content-center mt-0 pt-0 row-1 mb-0 px-sm-3 px-2">
+      <div class="col-12">
+          <div class="row my-4 row-1 no-gutters">
+              <div class="col-sm-3 col-auto text-center"><small>&#9400; My phone</small></div>
+              <div class="col-md-3 col-auto "></div>
+              <div class="col-md-3 col-auto"></div>
+              <div class="col my-auto text-md-left text-right "> <small> @My phone.com <span><img src="https://i.imgur.com/TtB6MDc.png" class="img-fluid " width="25"></span> <span><img src="https://i.imgur.com/N90KDYM.png" class="img-fluid " width="25"></span></small> </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+       
+    
+        
+        
+        
+
+     
+
+        
+
+        
 
 
 </div>
