@@ -20,6 +20,10 @@ def cart(request):
 def profile(request):
     return render(request,"profile.html")
 
+def dtls1(request):
+    return render(request,"dtls1.html")    
+
+
 
 
 

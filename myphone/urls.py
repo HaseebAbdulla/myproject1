@@ -7,6 +7,7 @@ urlpatterns = [
     path('sign',views.sign,name="sign"),
     path('details',views.details,name="details"),
     path('cart',views.cart,name="cart"),
-     path('profile',views.profile,name="profile"),
+    path('profile',views.profile,name="profile"),
+    path('dtls1',views.dtls1,name="dtls1"),
     
 ]
