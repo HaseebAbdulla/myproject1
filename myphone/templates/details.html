@@ -46,6 +46,8 @@ li {
 
       <h2 align="center">Create An Account</h2><hr>
 
+      
+
 
       <div class="container d-flex justify-content-center my-5">
         <div class="row my-2 mx-2 main">
@@ -57,16 +59,17 @@ li {
                
                 <form class="myform">
                     <div class="row rone">
-                        <div class="form-group col-md-6 fone py-3"> <input type="text" class="form-control" placeholder="First name"> </div>
-                        <div class="form-group col-md-6 ftwo py-3"> <input type="text" class="form-control" placeholder="Last name"> </div>
+                        <div class="form-group col-md-6 fone py-3"> <input type="text" class="form-control" placeholder="First name" id="first name"> </div>
+                        
+                        <div class="form-group col-md-6 ftwo py-3"> <input type="text" class="form-control" placeholder="Last name" id="last name"> </div>
                     </div>
                     <div class="row rtwo">
-                        <div class="form-group col-md-6 fthree py-3"> <input type="text" class="form-control jk" placeholder="Phone"> </div>
-                        <div class="form-group col-md-6 ffour py-3"> <input type="email" class="form-control lm" placeholder="knwst@gmail.com"> </div>
+                        <div class="form-group col-md-6 fthree py-3"> <input type="text" class="form-control jk" placeholder="Phone" id="phone"> </div>
+                        <div class="form-group col-md-6 ffour py-3"> <input type="email" class="form-control lm" placeholder="knwst@gmail.com" id="email"> </div>
                     </div>
                     <div class="row rthree">
-                        <div class="form-group col-md-6 ffive py-3"> <input type="password" class="form-control" placeholder="Password"> </div>
-                        <div class="form-group col-md-6 fsix py-3"> <input type="password" class="form-control" placeholder="Confirm Password"> </div>
+                        <div class="form-group col-md-6 ffive py-3"> <input type="password" class="form-control" placeholder="Password" id="password1"> </div>
+                        <div class="form-group col-md-6 fsix py-3"> <input type="password" class="form-control" placeholder="Confirm Password" id="password2"> </div>
                     </div>
                     <div class="row rfour">
                         <div class="form-group col-md-6 fseven py-3" > <a href="{% url 'home'%}" type="submit" class="btn btn-dark"><span>Create account</span></a> </div>
@@ -78,6 +81,80 @@ li {
             </div>
         </div>
     </div>
+
+
+    <!-- <script>
+        function validation(){
+            status=1
+            var name=document.getElementById("first name")
+            var name=document.getElementById("last name")
+            var email=document.getElementById("email")
+            var password1=document.getElementById("password1")
+            var password2=document.getElementById("password2")
+
+
+
+            if(name.value=="") {
+                document.getElementById("first name").style.borderColor="red"
+                // alert("user name must be filled")
+                document.getElementById("nameError").innerHTML="username must be filled"
+                document.getElementById("nameError").style.color="red"
+            
+                // document.getElementById("btn1").disabled=true
+                status=0
+            }
+            else{
+                document.getElementById("first name").style.borderColor="black"
+                // alert("user name must be filled")
+                document.getElementById("nameError").innerHTML=""
+                document.getElementById("nameError").style.color="black" 
+            }
+
+            if(name.value=="") {
+                document.getElementById("last name").style.borderColor="red"
+                // alert("user name must be filled")
+                document.getElementById("nameError").innerHTML="username must be filled"
+                document.getElementById("nameError").style.color="red"
+            
+                // document.getElementById("btn1").disabled=true
+                status=0
+            }
+            else{
+                document.getElementById("last name").style.borderColor="black"
+                // alert("user name must be filled")
+                document.getElementById("nameError").innerHTML=""
+                document.getElementById("nameError").style.color="black" 
+            }
+
+           if (email.value==""){
+                // alert("email must be filled")
+                document.getElementById("email").value="email must be filled"
+                document.getElementById("email").style.color="red"
+                status=0
+
+
+            }
+                if(password1.value.length < 6 || password1.value.lenth > 10) {
+                    // alert("password must be greater than 6 less than 10")
+                    document.getElementById("password1").value="password must be filled"
+                    document.getElementById("password1").style.color="red"
+                    status=0
+                }
+
+                 if (password1.value != password2.value){
+                    // alert("password must be same")
+                    document.getElementById("password2").value="password must be same"
+                    document.getElementById("password2").style.color="red"
+                    status=0
+                }
+            if(status==0){
+                return false
+            }
+
+        }
+
+    </script> -->
+    
 
 
 
