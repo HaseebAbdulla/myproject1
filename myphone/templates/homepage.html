@@ -1,4 +1,7 @@
+{% extends 'usermaster.html'  %}
 {% load static %}
+{% block content %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,93 +12,14 @@
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-<style>
- 
-footer {
-    color: #caced1 !important
-}
 
-li {
-    margin-top: 20px;
-    margin-bottom: 20px
-}
-
-.Careers {
-    cursor: pointer;
-    color: #1E88E5
-}
-
-.row-1 {
-    background-color: #1E242A !important
-}
-
-.row-2 {
-    background-color: #28323C !important
-}
-</style>
 
 </head>
 <body>
   <div class="container-fluid">
 
 
-    
-
-
-
-
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">  <b style="color: aliceblue;"><u>My Phone</u></b></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}"><b style="color: aliceblue;">Home</b> <span class="sr-only">(current)</span></a>
-            </li> 
-            <li class="nav-item">
-             
-              <a class="nav-link" href="{% url 'cart' %}" style="color: aliceblue;"><b>CART</b></a>
-            </li>
-
-            <li class="nav-item">
-             
-              <a class="nav-link" href="{% url 'profile' %}" style="color: aliceblue;"><b>PROFILE</b></a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                <b style="color: aliceblue;">Models</b>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"><i><b>iphone 11</b></i></a>
-                <a class="dropdown-item" href="#"><i><b>iphone 12</b></i></a>
-                <a class="dropdown-item" href="#"><i><b>iphone 13</b></i></a>
-                <div class="dropdown-divider"></div>
-                
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled"></a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-2" action="{% url 'login' %}">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><b>Log Out</b></button>
-           
-            <h2></h2>
-          </form>
-        </div>
-      </nav>
-       
-        <br><br><br><br><br><br>
-
-       
-
-      
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -105,19 +29,19 @@ li {
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{% static 'images/ads9.jpg'%}" class="d-block w-100" alt="..." height="390x" width="100%">
+              <img src="{% static 'images/ads1.jpg'%}" class="d-block w-100" alt="..." height="390x" width="100%">
             </div>
             <div class="carousel-item">
-              <img src="{% static 'images/ads13.jpg'%}" class="d-block w-100" alt="..." height="390px">
+              <img src="{% static 'images/ads9.jpg'%}" class="d-block w-100" alt="..." height="390px">
             </div>
             <div class="carousel-item">
               <img src="{% static 'images/ads12.jpg'%}" class="d-block w-100" alt="..." height="390px">
             </div>
             <div class="carousel-item">
-              <img src="{% static 'images/ads9.jpg'%}" class="d-block w-100" alt="..." height="390px">
+              <img src="{% static 'images/ads13.jpg'%}" class="d-block w-100" alt="..." height="390px">
             </div>
             <!-- <div class="carousel-item">
-              <img src="{% static 'images/ads3.jpg'%}" class="d-block w-100" alt="..." height="390px">
+              <img src="{% static 'images/ads6.jpg'%}" class="d-block w-100" alt="..." height="390px">
             </div> -->
           </div>
           </div>
@@ -132,20 +56,20 @@ li {
         </div>
      
       <br><br><br>
-      <marquee behavior="" direction="center"><h2 align="center"> <b> MY STORE.</b> <span style="color: gray;">The best way to buy the products you love.</span></h2><br></marquee><br><hr><br>
+      <marquee behavior="" direction="center"><h2 align="center"> <b> MY PHONE.</b> <span style="color: gray;">The best way to buy the products you love.</span></h2><br></marquee><br><hr><br>
        
-      <div>
+      <!-- <div>
         <img src="{% static 'images/logo.jpg'%}" alt="" width="1200pxpx" height="200px" align="center">
-       </div><br>
+       </div><br> -->
 
       
-               
+       <!-- first row         -->
 
                   <div class="row" id="13">
                     <div class="col-md-3 col-3 mx-auto" style="max-height: 200px; min-height: 200px;">
                       <div class="card" style="width: 18rem;">
                         <!-- <h3 align="center">APPLE</H2><hr> -->
-                       <a href="{% url 'dtls1' %}"> <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iPhone.png'%}" height="250px" width="250px" alt="..."></a>
+                       <a href="{% url 'dtls1' %}"> <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iPhone.png'%}" height="250px" width="200px" alt="..."></a>
                         <br>
                         <div class="card-body">
                           <h5 class="card-title">I PHONE 13 PRO</h5><hr>
@@ -153,7 +77,7 @@ li {
                           <li>128</li>
                           <li>256</li></b></p> -->
                           <h4> <strike>₹125,900</strike> <b> ₹109,900</b></h2>
-                          <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                          <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                           <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                         </div>
                       </div>
@@ -164,7 +88,7 @@ li {
                     <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
                       <div class="card"  style="width: 18rem;">
                         <!-- <h3 align="center">APPLE</H2><hr> -->
-                        <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="...">
+                        <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="..."></a>
                         <br>
                         <div class="card-body">
                           <h5 class="card-title">I PHONE 12 PRO</h5><hr>
@@ -172,7 +96,7 @@ li {
                           <li>128</li>
                           <li>256</li></b></p> -->
                           <h4> <strike> ₹110,000</strike><b> ₹90,900</b></h2>
-                          <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                          <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                           <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                         </div>
                       </div>
@@ -183,15 +107,16 @@ li {
                         <div class="card" style="width: 18rem;">
                           <!-- <h3 align="center">APPLE</H2><hr><br> -->
                             <br>
-                          <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/11pro.jpg'%}" height="204px" width="220px" alt="...">
-                          <br><br>
+                            <a href="{% url 'dtls3' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/11pro.jpg'%}" height="204px" width="220px" alt="...">
+                            </a>
+                            <br><br>
                           <div class="card-body">
                             <h5 class="card-title">I PHONE 13 PRO</h5><hr>
                             <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
                             <li>128</li>
                             <li>256</li></b></p> -->
                             <h4> <strike>₹95,000</strike><b>₹80,900</b></h2>
-                            <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                            <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                             <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                           </div>
                         </div>
@@ -200,7 +125,8 @@ li {
                        <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
                         <div class="card"  style="width: 18rem;">
                           <!-- <h3 align="center">APPLE</H2><hr> -->
-                          <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="...">
+                            <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iphone2.jpg'%}" height="250px" width="250px" alt="...">
+                            </a>
                           <br>
                           <div class="card-body">
                             <h5 class="card-title">I PHONE 12 PRO</h5><hr>
@@ -208,7 +134,7 @@ li {
                             <li>128</li>
                             <li>256</li></b></p> -->
                             <h4> <strike>₹102,000</strike><b> ₹90,900</b></h2>
-                            <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                            <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                             <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                           </div>
                         </div>
@@ -217,11 +143,16 @@ li {
                       
 
                        </div>
+
+
+      <!-- second row -->
+
+
                        <div class="row" id="14" style="padding-top: 400px;">
                         <div class="col-md-3 col-3 mx-auto" style="max-height: 200px; min-height: 200px;">
                           <div class="card" style="width: 18rem;">
                             <!-- <h3 align="center">APPLE</H2><hr> -->
-                            <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iPhone.png'%}" height="250px" width="250px" alt="...">
+                             <a href="{% url 'dtls1' %}"> <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iphone2.jpg'%}" height="250px" width="250px" alt="..."></a>
                             <br>
                             <div class="card-body">
                               <h5 class="card-title">I PHONE 13 PRO</h5><hr>
@@ -229,7 +160,7 @@ li {
                               <li>128</li>
                               <li>256</li></b></p> -->
                               <h4> <strike>₹125,900</strike><b>₹109,900</b></h2>
-                              <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                              <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                               <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                             </div>
                           </div>
@@ -240,7 +171,7 @@ li {
                         <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
                           <div class="card"  style="width: 18rem;">
                             <!-- <h3 align="center">APPLE</H2><hr> -->
-                            <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="...">
+                            <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="..."></a>
                             <br>
                             <div class="card-body">
                               <h5 class="card-title">I PHONE 12 PRO</h5><hr>
@@ -248,7 +179,7 @@ li {
                               <li>128</li>
                               <li>256</li></b></p> -->
                               <h4>  <strike> ₹110,000</strike><b> ₹90,900</b></h2>
-                              <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                              <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                               <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                             </div>
                           </div>
@@ -259,15 +190,15 @@ li {
                             <div class="card" style="width: 18rem;">
                               <!-- <h3 align="center">APPLE</H2><hr><br> -->
                                 <br>
-                              <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/11pro.jpg'%}" height="204px" width="220px" alt="...">
-                              <br><br>
+                                <a href="{% url 'dtls3' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/11pro.jpg'%}" height="204px" width="220px" alt="...">
+                              <br><br><br>
                               <div class="card-body">
                                 <h5 class="card-title">I PHONE 13 PRO</h5><hr>
                                 <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
                                 <li>128</li>
                                 <li>256</li></b></p> -->
                                 <h4> <strike>₹95,000</strike><b> ₹ 80,900</b></h2>
-                                <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                                <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                                 <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                               </div>
                             </div>
@@ -277,15 +208,16 @@ li {
                            <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
                             <div class="card"  style="width: 18rem;">
                               <!-- <h3 align="center">APPLE</H2><hr> -->
-                              <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="...">
+                                <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="...">
+                                </a>
                               <br>
                               <div class="card-body">
                                 <h5 class="card-title">I PHONE 12 PRO</h5><hr>
                                 <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
                                 <li>128</li>
                                 <li>256</li></b></p> -->
-                                <h4>  <strike>₹102,000</strike><b> $90,900</b></h2>
-                                <a href="{% url 'sign' %}" class="btn btn-dark">BUY NOW</a>
+                                <h4>  <strike>₹102,000</strike><b> ₹90,900</b></h2>
+                                <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
                                 <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
                               </div>
                             </div>
@@ -300,8 +232,169 @@ li {
                       
                  </div>
 
+  <!-- third row -->
+
+                 <div class="row" id="14" style="padding-top: 400px;">
+                  <div class="col-md-3 col-3 mx-auto" style="max-height: 200px; min-height: 200px;">
+                    <div class="card" style="width: 18rem;">
+                      <!-- <h3 align="center">APPLE</H2><hr> -->
+                       <a href="{% url 'dtls1' %}"> <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iPhone.png'%}" height="250px" width="200px" alt="..."></a>
+                      <br>
+                      <div class="card-body">
+                        <h5 class="card-title">I PHONE 13 PRO</h5><hr>
+                        <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                        <li>128</li>
+                        <li>256</li></b></p> -->
+                        <h4> <strike>₹125,900</strike><b>₹109,900</b></h2>
+                        <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                        <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                      </div>
+                    </div>
+
+                    
+
+                  </div>
+                  <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
+                    <div class="card"  style="width: 18rem;">
+                      <!-- <h3 align="center">APPLE</H2><hr> -->
+                      <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="..."></a>
+                      <br>
+                      <div class="card-body">
+                        <h5 class="card-title">I PHONE 12 PRO</h5><hr>
+                        <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                        <li>128</li>
+                        <li>256</li></b></p> -->
+                        <h4>  <strike> ₹110,000</strike><b> ₹90,900</b></h2>
+                        <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                        <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                      </div>
+                    </div>
+
                  
-               </div>
+                    </div>
+                    <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
+                      <div class="card" style="width: 18rem;">
+                        <!-- <h3 align="center">APPLE</H2><hr><br> -->
+                          <br>
+                          <a href="{% url 'dtls3' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/11pro.jpg'%}" height="204px" width="220px" alt="...">
+                        <br><br><br>
+                        <div class="card-body">
+                          <h5 class="card-title">I PHONE 13 PRO</h5><hr>
+                          <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                          <li>128</li>
+                          <li>256</li></b></p> -->
+                          <h4> <strike>₹95,000</strike><b> ₹ 80,900</b></h2>
+                          <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                          <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                        </div>
+                      </div>
+
+
+                     </div>
+                     <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
+                      <div class="card"  style="width: 18rem;">
+                        <!-- <h3 align="center">APPLE</H2><hr> -->
+                          <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="...">
+                          </a>
+                        <br>
+                        <div class="card-body">
+                          <h5 class="card-title">I PHONE 12 PRO</h5><hr>
+                          <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                          <li>128</li>
+                          <li>256</li></b></p> -->
+                          <h4>  <strike>₹102,000</strike><b> ₹90,900</b></h2>
+                          <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                          <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                        </div>
+                      </div>
+
+
+                 
+               </div>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>
+
+
+               <!-- fourth row -->
+
+
+               
+               <div class="row" id="13">
+                <div class="col-md-3 col-3 mx-auto" style="max-height: 200px; min-height: 200px;">
+                  <div class="card" style="width: 18rem;">
+                    <!-- <h3 align="center">APPLE</H2><hr> -->
+                   <a href="{% url 'dtls1' %}"> <img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iPhone.png'%}" height="250px" width="200px" alt="..."></a>
+                    <br>
+                    <div class="card-body">
+                      <h5 class="card-title">I PHONE 13 PRO</h5><hr>
+                      <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                      <li>128</li>
+                      <li>256</li></b></p> -->
+                      <h4> <strike>₹125,900</strike> <b> ₹109,900</b></h2>
+                      <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                      <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                    </div>
+                  </div>
+
+                  
+
+                </div>
+                <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
+                  <div class="card"  style="width: 18rem;">
+                    <!-- <h3 align="center">APPLE</H2><hr> -->
+                    <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/12pro.jpg'%}" height="250px" width="250px" alt="..."></a>
+                    <br>
+                    <div class="card-body">
+                      <h5 class="card-title">I PHONE 12 PRO</h5><hr>
+                      <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                      <li>128</li>
+                      <li>256</li></b></p> -->
+                      <h4> <strike> ₹110,000</strike><b> ₹90,900</b></h2>
+                      <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                      <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                    </div>
+                  </div>
+
+               
+                  </div>
+                  <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
+                    <div class="card" style="width: 18rem;">
+                      <!-- <h3 align="center">APPLE</H2><hr><br> -->
+                        <br>
+                        <a href="{% url 'dtls3' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/11pro.jpg'%}" height="204px" width="220px" alt="...">
+                        </a>
+                        <br><br>
+                      <div class="card-body">
+                        <h5 class="card-title">I PHONE 13 PRO</h5><hr>
+                        <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                        <li>128</li>
+                        <li>256</li></b></p> -->
+                        <h4> <strike>₹95,000</strike><b>₹80,900</b></h2>
+                        <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                        <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                      </div>
+                    </div>
+
+                   </div>
+                   <div class="col-md-3 col-3" style="max-height: 200px; min-height: 200px;">
+                    <div class="card"  style="width: 18rem;">
+                      <!-- <h3 align="center">APPLE</H2><hr> -->
+                        <a href="{% url 'dtls2' %}"><img style="min-height:200px ;max-height: 400px;" src="{% static 'images/iphone2.jpg'%}" height="250px" width="250px" alt="...">
+                        </a>
+                      <br>
+                      <div class="card-body">
+                        <h5 class="card-title">I PHONE 12 PRO</h5><hr>
+                        <!-- <p class="card-text"><b>Available models</b><hr><br><b><li>64</li>
+                        <li>128</li>
+                        <li>256</li></b></p> -->
+                        <h4> <strike>₹102,000</strike><b> ₹90,900</b></h2>
+                        <a href="{% url 'details' %}" class="btn btn-dark">BUY NOW</a>
+                        <a href="{% url 'cart' %}"> <button type="button" class="btn btn-dark">ADD TO CART</button></a>
+                      </div>
+                    </div>
+
+                   
+                  
+
+                   </div>
 
                
 
@@ -319,48 +412,8 @@ li {
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
    
 
-     <footer>
-      <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3">
-          <div class="col-12">
-              <div class="row row-2">
-                  <div class="col-sm-3 text-md-center">
-                      <h5><span> <i class="fa fa-firefox text-light" aria-hidden="true"></i></span><b> <b>My Phone</b></b></h5>
-                  </div>
-                  <div class="col-sm-3 my-sm-0 mt-5">
-                      <ul class="list-unstyled">
-                          <li class="mt-0">Platform</li>
-                          <li>Help Center</li>
-                          <li>Security</li>
-                      </ul>
-                  </div>
-                  <div class="col-sm-3 my-sm-0 mt-5">
-                      <ul class="list-unstyled">
-                          <li class="mt-0">Customers</li>
-                          <li>Use Cases</li>
-                          <li>Customers Services</li>
-                      </ul>
-                  </div>
-                  <div class="col-sm-3 my-sm-0 mt-5">
-                      <ul class="list-unstyled">
-                          <li class="mt-0">Company</li>
-                          <li>About</li>
-                          <li>Careers- <span class="Careers">We're-hiring</span></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row justify-content-center mt-0 pt-0 row-1 mb-0 px-sm-3 px-2">
-          <div class="col-12">
-              <div class="row my-4 row-1 no-gutters">
-                  <div class="col-sm-3 col-auto text-center"><small>&#9400; My phone</small></div>
-                  <div class="col-md-3 col-auto "></div>
-                  <div class="col-md-3 col-auto"></div>
-                  <div class="col my-auto text-md-left text-right "> <small> @My phone.com <span><img src="https://i.imgur.com/TtB6MDc.png" class="img-fluid " width="25"></span> <span><img src="https://i.imgur.com/N90KDYM.png" class="img-fluid " width="25"></span></small> </div>
-              </div>
-          </div>
-      </div>
-  </footer><br><br><br>
+
+  {% endblock %}
 
  
 

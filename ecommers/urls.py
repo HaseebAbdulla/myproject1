@@ -18,8 +18,10 @@ from django.urls import path,include
 
 urlpatterns = [
     path('', include("myphone.urls")),
+    path('mpadmin',include("mpadmin.urls"))
    
     
 ]
+
 
 

@@ -36,6 +36,8 @@ li {
   
 </style>
 </head>
+
+
 <body>
 
   <div>
@@ -48,19 +50,22 @@ li {
       
     </form>
   </nav>
+
   
     <tr>
         
         <br>
-        <br><br><br> 
+        <br><br>
         <h2 align="center" style="color: gray;">
             
         </h2>
         
         <!-- <h1 align="center" style="color: aliceblue;"> <b>MY PHONE</b></h1><hr> -->
         <br><br><br><br>
-        <h3 style="color: slategray;" align="center"><b>WELCOME TO OUR WORLD!..</b></h2><hr>
+        <h3 style="color: slategray;" align="center"><b>WELCOME TO OUR MOBILE WORLD!..</b></h2><hr>
         <br>
+
+        
         
         
         <style>
@@ -74,99 +79,44 @@ li {
           
 
 
-        <form align="center" border="1">
+        <form align="center" border="1" method="POST">
+          {%csrf_token%}
+          
             
             <div class="form-group row">
               <label for="staticEmail" class="col-lg-4  col-form-label" style="color: aliceblue;" ><b>EMAIL</b></label>
               <div class="col-lg-4">
-                <input type="text"  class="form-control" id="email" placeholder="enter your email">
+                <input type="text"   class="form-control" id="email" name="email" placeholder="enter your email">
               </div>
             </div>
             <div class="form-group row">
               <label for="inputPassword" class="col-lg-4 col-form-label" style="color: whitesmoke;" ><b>PASSWORD</b></label>
               <div class="col-lg-4">
-                <input type="password" class="form-control" id="Password" placeholder=" enter your password">
+                <input type="password" class="form-control" id="Password" name="password" placeholder=" enter your password">
               </div>
             </div>
-          </form><br>
+
+        
+          
+         
         </tr>
-        <div align="center"><a href="{% url 'home' %}"><button type="button" class="btn btn-primary btn-sm">login</button>
-        </a>
+
+
+        <div align="center"><button type="submit" id="btn1" class="btn btn-primary btn-sm">login</button>
+        
         <br><br>
+        <b style="color: red;"><u>{{errmsg}}</u></b>
 
-        <!-- <p style="color: aliceblue;"><i>Do You Have Any Account?</i></p> -->
-        <a href="{% url 'details'%}" style="color: aliceblue;"> <i>Do You Have Any Account?</i></a><br><br>
-        
-        <!-- <a href="{% url 'details' %}"> <button type="button" class="btn btn-dark">create new account</button></a> -->
-        <br><br><br>
-        
-
-
-
-        
-      
-
-
-
-
-
-
- <footer>
-  <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3">
-      <div class="col-12">
-          <div class="row row-2">
-              <div class="col-sm-3 text-md-center">
-                  <h5><span> <i class="fa fa-firefox text-light" aria-hidden="true"></i></span><b> <b>My Phone</b></b></h5>
-              </div>
-              <div class="col-sm-3 my-sm-0 mt-5">
-                  <ul class="list-unstyled">
-                      <li class="mt-0">Platform</li>
-                      <li>Help Center</li>
-                      <li>Security</li>
-                  </ul>
-              </div>
-              <div class="col-sm-3 my-sm-0 mt-5">
-                  <ul class="list-unstyled">
-                      <li class="mt-0">Customers</li>
-                      <li>Use Cases</li>
-                      <li>Customers Services</li>
-                  </ul>
-              </div>
-              <div class="col-sm-3 my-sm-0 mt-5">
-                  <ul class="list-unstyled">
-                      <li class="mt-0">Company</li>
-                      <li>About</li>
-                      <li>Careers- <span class="Careers">We're-hiring</span></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row justify-content-center mt-0 pt-0 row-1 mb-0 px-sm-3 px-2">
-      <div class="col-12">
-          <div class="row my-4 row-1 no-gutters">
-              <div class="col-sm-3 col-auto text-center"><small>&#9400; My phone</small></div>
-              <div class="col-md-3 col-auto "></div>
-              <div class="col-md-3 col-auto"></div>
-              <div class="col my-auto text-md-left text-right "> <small> @My phone.com <span><img src="https://i.imgur.com/TtB6MDc.png" class="img-fluid " width="25"></span> <span><img src="https://i.imgur.com/N90KDYM.png" class="img-fluid " width="25"></span></small> </div>
-          </div>
-      </div>
-  </div>
-</footer>
-
+       <a href="{% url 'sign'%}" style="color: aliceblue;"> <i>Do You Have Any Account?</i></a><br><br>
        
     
-        
-        
-        
 
-     
+       
+        <br><br><br>
+      </form><br>
 
-        
-
-        
-
-
+       
+  
 </div>
 </div>
 </body>

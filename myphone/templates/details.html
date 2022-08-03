@@ -1,4 +1,5 @@
 {% load static %}
+<!-- billing page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYPHONE</title>
-    <!-- <link rel="stylesheet" href="{% static 'css/stylecss.css'%}"> -->
+    <link rel="stylesheet" href="{% static 'css/stylecss.css'%}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">  
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 <style>
-    footer {
+  footer {
     color: #caced1 !important
 }
 
@@ -33,184 +34,172 @@ li {
 .row-2 {
     background-color: #28323C !important
 }
-  
 </style>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-light bg-dark">
-        <a class="navbar-brand" style="color: aliceblue;"><b><u>My Phone</u></b></a><hr>
-        <form class="form-inline">
-           </form>
-      </nav><br><br><br>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"> <b style="color: aliceblue;"><u>My Phone</u></b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home' %}"><b style="color: aliceblue;">Home</b> <span class="sr-only">(current)</span></a>
+        </li> 
+        <li class="nav-item">
+         
+          <a class="nav-link" href="{% url 'cart' %}" style="color: aliceblue;"><b>CART</b></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            <b style="color: aliceblue;"><b>models</b></b>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#"><i><b>iphone 11</b></i></a>
+            <a class="dropdown-item" href="#"><i><b>iphone 12</b></i></a>
+            <a class="dropdown-item" href="#"><i><b>iphone 13</b></i></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled"></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-2">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <a href="{% url 'login' %}"><button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><b>Log Out</b></button></a>
+       
+        <h2></h2>
+      </form>
+    </div>
+  </nav><br><br><br><br><br><br><br><br>
+
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php">
+  
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="john@example.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" placeholder="New York">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" placeholder="NY">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="10001">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Continue to checkout" class="btn">
+          <h3 align="center" style="color: lightslategray;">Thank you for Shopping With Us..!</h3>
+          <div align="center"><a href="{% url 'home' %}"><button type="button" class="btn btn-primary btn-sm">BUY NOW</button>
+          </a>
+          
+        </form>
+        
+      </div>
+    </div>
+  <div >
+       </div>
+    </div>
+  </div><br><br><br><br>
+  
 
 
-      <h2 align="center">Create An Account</h2><hr>
-
-      
 
 
-      <div class="container d-flex justify-content-center my-5">
-        <div class="row my-2 mx-2 main">
-            <!--left-column-->
-            <div class="col-md-4 col-12 mycol">
-                <!--image--> <img src="{% static 'images/bg3.jpg'%}" width="100%" height="100%"> </div>
-            <!--right-column-->
-            <div class="col-md-8 col-12 xcol">
-               
-                <form class="myform">
-                    <div class="row rone">
-                        <div class="form-group col-md-6 fone py-3"> <input type="text" class="form-control" placeholder="First name" id="first name"> </div>
-                        
-                        <div class="form-group col-md-6 ftwo py-3"> <input type="text" class="form-control" placeholder="Last name" id="last name"> </div>
-                    </div>
-                    <div class="row rtwo">
-                        <div class="form-group col-md-6 fthree py-3"> <input type="text" class="form-control jk" placeholder="Phone" id="phone"> </div>
-                        <div class="form-group col-md-6 ffour py-3"> <input type="email" class="form-control lm" placeholder="knwst@gmail.com" id="email"> </div>
-                    </div>
-                    <div class="row rthree">
-                        <div class="form-group col-md-6 ffive py-3"> <input type="password" class="form-control" placeholder="Password" id="password1"> </div>
-                        <div class="form-group col-md-6 fsix py-3"> <input type="password" class="form-control" placeholder="Confirm Password" id="password2"> </div>
-                    </div>
-                    <div class="row rfour">
-                        <div class="form-group col-md-6 fseven py-3" > <a href="{% url 'home'%}" type="submit" class="btn btn-dark"><span>Create account</span></a> </div>
-                        <div class="form-group col-md-6 feight py-3">
-                            <p class="text-muted">Already have an account?<br><a href="{% url 'login' %}">Sign in</a></p>
-                        </div>
-                    </div>
-                </form>
+  <footer>
+    <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3">
+        <div class="col-12">
+            <div class="row row-2">
+                <div class="col-sm-3 text-md-center">
+                    <h5><span> <i class="fa fa-firefox text-light" aria-hidden="true"></i></span><b> <b>My Phone</b></b></h5>
+                </div>
+                <div class="col-sm-3 my-sm-0 mt-5">
+                    <ul class="list-unstyled">
+                        <li class="mt-0">Platform</li>
+                        <li>Help Center</li>
+                        <li>Security</li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 my-sm-0 mt-5">
+                    <ul class="list-unstyled">
+                        <li class="mt-0">Customers</li>
+                        <li>Use Cases</li>
+                        <li>Customers Services</li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 my-sm-0 mt-5">
+                    <ul class="list-unstyled">
+                        <li class="mt-0">Company</li>
+                        <li>About</li>
+                        <li>Careers- <span class="Careers">We're-hiring</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-
-
-    <!-- <script>
-        function validation(){
-            status=1
-            var name=document.getElementById("first name")
-            var name=document.getElementById("last name")
-            var email=document.getElementById("email")
-            var password1=document.getElementById("password1")
-            var password2=document.getElementById("password2")
-
-
-
-            if(name.value=="") {
-                document.getElementById("first name").style.borderColor="red"
-                // alert("user name must be filled")
-                document.getElementById("nameError").innerHTML="username must be filled"
-                document.getElementById("nameError").style.color="red"
-            
-                // document.getElementById("btn1").disabled=true
-                status=0
-            }
-            else{
-                document.getElementById("first name").style.borderColor="black"
-                // alert("user name must be filled")
-                document.getElementById("nameError").innerHTML=""
-                document.getElementById("nameError").style.color="black" 
-            }
-
-            if(name.value=="") {
-                document.getElementById("last name").style.borderColor="red"
-                // alert("user name must be filled")
-                document.getElementById("nameError").innerHTML="username must be filled"
-                document.getElementById("nameError").style.color="red"
-            
-                // document.getElementById("btn1").disabled=true
-                status=0
-            }
-            else{
-                document.getElementById("last name").style.borderColor="black"
-                // alert("user name must be filled")
-                document.getElementById("nameError").innerHTML=""
-                document.getElementById("nameError").style.color="black" 
-            }
-
-           if (email.value==""){
-                // alert("email must be filled")
-                document.getElementById("email").value="email must be filled"
-                document.getElementById("email").style.color="red"
-                status=0
-
-
-            }
-                if(password1.value.length < 6 || password1.value.lenth > 10) {
-                    // alert("password must be greater than 6 less than 10")
-                    document.getElementById("password1").value="password must be filled"
-                    document.getElementById("password1").style.color="red"
-                    status=0
-                }
-
-                 if (password1.value != password2.value){
-                    // alert("password must be same")
-                    document.getElementById("password2").value="password must be same"
-                    document.getElementById("password2").style.color="red"
-                    status=0
-                }
-            if(status==0){
-                return false
-            }
-
-        }
-
-    </script> -->
-    
-
-
-
-
-
-    <footer>
-        <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3">
-            <div class="col-12">
-                <div class="row row-2">
-                    <div class="col-sm-3 text-md-center">
-                        <h5><span> <i class="fa fa-firefox text-light" aria-hidden="true"></i></span><b> <b>My Phone</b></b></h5>
-                    </div>
-                    <div class="col-sm-3 my-sm-0 mt-5">
-                        <ul class="list-unstyled">
-                            <li class="mt-0">Platform</li>
-                            <li>Help Center</li>
-                            <li>Security</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 my-sm-0 mt-5">
-                        <ul class="list-unstyled">
-                            <li class="mt-0">Customers</li>
-                            <li>Use Cases</li>
-                            <li>Customers Services</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 my-sm-0 mt-5">
-                        <ul class="list-unstyled">
-                            <li class="mt-0">Company</li>
-                            <li>About</li>
-                            <li>Careers- <span class="Careers">We're-hiring</span></li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="row justify-content-center mt-0 pt-0 row-1 mb-0 px-sm-3 px-2">
+        <div class="col-12">
+            <div class="row my-4 row-1 no-gutters">
+                <div class="col-sm-3 col-auto text-center"><small>&#9400; My phone</small></div>
+                <div class="col-md-3 col-auto "></div>
+                <div class="col-md-3 col-auto"></div>
+                <div class="col my-auto text-md-left text-right "> <small> @My phone.com <span><img src="https://i.imgur.com/TtB6MDc.png" class="img-fluid " width="25"></span> <span><img src="https://i.imgur.com/N90KDYM.png" class="img-fluid " width="25"></span></small> </div>
             </div>
         </div>
-        <div class="row justify-content-center mt-0 pt-0 row-1 mb-0 px-sm-3 px-2">
-            <div class="col-12">
-                <div class="row my-4 row-1 no-gutters">
-                    <div class="col-sm-3 col-auto text-center"><small>&#9400; My phone</small></div>
-                    <div class="col-md-3 col-auto "></div>
-                    <div class="col-md-3 col-auto"></div>
-                    <div class="col my-auto text-md-left text-right "> <small> @My phone.com <span><img src="https://i.imgur.com/TtB6MDc.png" class="img-fluid " width="25"></span> <span><img src="https://i.imgur.com/N90KDYM.png" class="img-fluid " width="25"></span></small> </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-      
-      
-
-     
- 
- 
-   
+    </div>
+</footer>
     
+      
 </body>
 </html>

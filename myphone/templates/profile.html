@@ -1,146 +1,133 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYPHONE</title>
     <!-- <link rel="stylesheet" href="{% static 'css/stylecss.css'%}"> -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">  
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
 
     <style>
-      
-/* {
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif
-} */
+        /* {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif
+        } */
+/* 
+        .container {
+            y height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black
+        } */
 
-.container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:black
-}
+        .card {
+            width: 350px;
+            height: 300px;
+            background-color: gray;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden
+        }
 
-.card {
-    width: 350px;
-    height: 470px;
-    background-color:gray ;
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden
-}
+        .card .info {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #e1dede;
+            background-color: #e5e5e5
+        }
 
-.card .info {
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #e1dede;
-    background-color: #e5e5e5
-}
+        /* .card .info button {
+            height: 30px;
+            width: 150px;
+            border: none;
+            color: #fff;
+            border-radius: 3px;
+            background-color: #000;
+            cursor: pointer;
+            text-transform: uppercase
+        } */
 
-.card .info button {
-    height: 30px;
-    width: 80px;
-    border: none;
-    color: #fff;
-    border-radius: 4px;
-    background-color: #000;
-    cursor: pointer;
-    text-transform: uppercase
-}
+        .card .forms {
+            padding: 15px
+        }
 
-.card .forms {
-    padding: 15px
-}
+        .card .inputs {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px
+        }
 
-.card .inputs {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px
-}
+        .card .inputs span {
+            font-size: 12px
+        }
 
-.card .inputs span {
-    font-size: 12px
-}
-
-.card .inputs input {
-    height: 40px;
-    padding: 0px 10px;
-    font-size: 17px;
-    box-shadow: none;
-    outline: none
-}
-
-.card .inputs input[type="text"][readonly] {
-    border: 2px solid rgba(0, 0, 0, 0)
-}
-
+        .card .inputs input {
+            height: 40px;
+            padding: 0px 10px;
+            font-size: 17px;
+            box-shadow: none;
+            outline: none
+        }
     </style>
 </head>
+
 <body><br>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <a class="navbar-brand" href="#"> <b style="color: aliceblue;"><u>My Phone</u></b></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}"><b style="color: aliceblue;">Home</b> <span class="sr-only">(current)</span></a>
-            </li> 
-            <li class="nav-item">
-             
-              <a class="nav-link" href="{% url 'cart' %}" style="color: aliceblue;"><b>CART</b></a>
-            </li>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}"><b style="color: aliceblue;">Home</b> <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
 
-            <!-- <li class="nav-item">
-             
-              <a class="nav-link" href="{% url 'profile' %}" style="color: aliceblue;"><b>PROFILE</b></a>
-            </li> -->
+                </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                <b style="color: aliceblue;">models</b>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"><i><b>iphone 11</b></i></a>
-                <a class="dropdown-item" href="#"><i><b>iphone 12</b></i></a>
-                <a class="dropdown-item" href="#"><i><b>iphone 13</b></i></a>
-                <div class="dropdown-divider"></div>
-               
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled"></a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-2" action="{% url 'login' %}">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <!-- <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><b>Log Out</b></button> -->
-           
-            <h2></h2>
-          </form>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled"></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-2" action="{% url 'login' %}">
+
+
+                <h2></h2>
+            </form>
         </div>
-      </nav>
+    </nav>
 
-      
-    
+
+
     <br><br><br><br><br><br>
 
     <style>
         body {
-          background-image: url("{% static 'images/bg3.jpg' %}");
+            background-image: url("{% static 'images/bg3.jpg' %}");
         }
-      
-        </style>
+    </style>
 
 
 
@@ -149,31 +136,50 @@
 
     <div align="center">
         <div class="card">
-            <div class="info"> <span>My profile</span> <button id="savebutton">edit</button> </div>
+            <div class="info"> <span><b>MY PROFILE</b></span><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal"  >
+                Update Password
+              </button> </div>
             <div class="forms">
-                <div class="inputs" > <span><b>First Name</b></span> <input type="text" readonly value="haseeb"> </div>
-                <div class="inputs"> <span><b>Last Name</b></span> <input type="text" readonly value="abdulla"> </div>
-                <div class="inputs"> <span><b>Email</b></span> <input type="text" readonly value="haseebabdulla@gmail.com"> </div>
-                <div class="inputs"> <span><b>UserName</b></span> <input type="text" readonly value="hasee"> </div>
-                <div class="inputs"> <span><b>Country</b></span> <input type="text" readonly value="india"></div>
+                <div class="inputs"> <span><b> Name</b></span> <input type="text" name="firstname" 
+                        value=""></div>
+                <div class="inputs"> <span><b>PHONE</b></span> <input type="text" name="lastname" 
+                        value=""> </div>
+                <div class="inputs"> <span><b>Email</b></span> <input type="text" name="email" 
+                        value=""> </div>
+                
             </div>
         </div>
-    </div><br><br>
+    </div>
+    <br><br>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <div align="center"><input type="text" placeholder="Current Password"></div><br>
+        <div align="center" ><input type="text" placeholder="New pasword" hidden> <input type="text" placeholder="Repeat Password" hidden></div>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-    
 
-
-
-    <script>
-        var savebutton = document.getElementById('savebutton');
-var readonly = true;
-var inputs = document.querySelectorAll('input[type="text"]');
-savebutton.addEventListener('click',function(){
-
-for (var i=0; i<inputs.length; i++) { inputs[i].toggleAttribute('readonly'); }; if (savebutton.innerHTML=="edit" ) { savebutton.innerHTML="save" ; } else { savebutton.innerHTML="edit" ; } });
-    </script>   
-    
 </body>
+
 </html>
